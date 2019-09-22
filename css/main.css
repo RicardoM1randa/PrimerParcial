@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+/* El CSS siguiente esta pensando primero para moviles y luego para 
+   Escritiorio*/
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: calc(0.5em + 1vh);
+}
+
+/* El estilo base para moviles */
+body {
+    background-color: #112935;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 400;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 5%;
+    margin-bottom: 2.8em;
+}
+
+/* se oculta elimina para src */
+.src-only {
+    display: none;  /* se oculta el elemento para src */
+}
+/* se elimina en moviles */
+.hide-mobile {
+    display: none;
+}
+/* para los parrafos se modifica el tamaño de la fuente
+el padding y la altura de del parrafo */
+p{
+    font-size: 0.75em;
+    padding: 1rem;
+    line-height: 25px;
+}
+/* para la imagen del logo se establece el ancho y margen*/
+.logo {
+    width: 90px;
+    margin: 1em;
+}
+/* para las opciones se hereda el color del body, que quita la decoracion del texto
+se establece una posicion relativa, se agrega un valor de top y right
+se cambia el tamaño de la fuente, se usa flex y salto de linea si los elementos no caben
+y se alinean los elementos */
+.options {
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    top: 30%;
+    right: 95%;
+    font-size: 1.5rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+}
+/* para el ultimo elemento de las opciones se modifica el tamaño de la fuente */
+.options i:last-child {
+    font-size: 1.6rem;
+}
+
+/* Big area, se asigna un ancho para
+las imagenes en big area */
+.big-hero img {
+    width: 150px;
+}
+/* para los h2 en big area se asigna un tamaño  y grosor de la fuente,
+se asigna un espaciado entre letras y un margen superior */
+.big-hero h2 {
+    font-size: 1.875em;
+    font-weight: 700;
+    letter-spacing: 0.002em;
+    margin-top: 1em ;
+}
+/* para los parrafos en big area se asigna un tamaño y color de fuente */
+.big-hero p {
+    font-size: 0.7em;;
+    color: #D7DEE6;
+
+}
+
+/* Social links*/
+/* para los social links se desactiva la decoracion de las lista, se asigna un padding de 0
+se pone el display flex y se define la direccion en filas, se alinea el contenido al centro */
+.social-links{
+    list-style: none;
+    padding: 0;
+    margin-top: 3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+
+}
+/* Social links en big hero, se define un margen superior y uno inferior */
+.big-hero .social-links{
+    margin-top: -8.1em;
+    margin-bottom: 12%;
+}
+/* se modifican los hipervinculos y las listas para los social links
+se modifica el color, se quita la decoracion del texto y el tamaño de la fuente
+*/
+.social-links li a{
+    color: #D7DEE6;
+    text-decoration: none;
+    font-size: 2.5em;
+}
+/* se define un margen entre los elementos */
+.big-hero .social-links li:first-child a{
+    margin-right: 0.12em;
+}
+/* se define el color de fondo para esta seccion */
+.green-area {
+    background-color: #0AC693; 
+}
+
+/* se define un padding y un margen inferior para post */
+.post {
+    padding: 1em;
+    margin-bottom: -2px;
+}
+/* se modifican los h2 para post, se convierte el texto a mayusculas, se asigna un grosor a la fuente
+,se cambia el tamaño de la fuente,se asigna un margen y se modifica el margen inferior */
+.post h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.125em;
+    margin: 1em;
+}
+/* se quita el estilo para las ul de post */
+.post ul {
+    list-style: none;
+}
+/* se modifican los items de las ul en post, se les asigna un alto y un ancho minimo
+se asigna un margen especifico para el superior e inferior y automatico a los lados */
+.post ul li {
+    min-height: 300px;
+    max-width: 350px;
+    margin: 2rem auto;
+}
+/* se modifican los articulos para post se recorta el contenido y no se muestran las barras laterales
+se asigna un border radius, se asigna un color de fondo, se alinea el texto a la izquiera
+y se asigna un padding inferior */
+.post ul li article {
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #ffffff;
+    text-align: left;
+    padding-bottom: 2em;
+}
+/* se modifican las imagenes de los articulos, se les asigna un alto y ancho
+se ajusta la imagenes al molde  */
+.post article img{
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+}
+/* para los h3 de articulo se asigna un colo de fuente,un margen superior,un padding,un tamaño de fuente
+ reduce los espacios en blanco pero ignora los saltos de linea, se recorta el contenido y no se muestran las barras de superior
+ cuando el texto es demasiado grande agrega puntos suspensivos */
+.post article h3 {
+    color: #0D5061;
+    margin-top: 2em;
+    padding: 0em 1rem;
+    font-size: 0.9em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* para los parrafos de los articulos se asigna un color de fuente, un margen superior
+se agrega un padding superior e inferior y uno lateral
+se modifica la altura del parrafo */
+.post article p {
+    color:#112935;
+    font-size: 0.75em;
+    padding: 1rem;
+    line-height: 25px;
+}
+
+/* About */
+/* Se agrega un margen superior al about */
+.about{
+    margin-top: 2em;
+}
+/* Para los h2 del about el texto se transforma a mayusculas
+un grosor de fuente, un tamaño de la fuente y un margen*/
+.about h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.125em;
+    margin: 2em;
+}
+/* imagenes bio-info se agrego un margen superior y uno inferior */
+.bio-info img{
+   width: 200px;
+   margin-top: 3em;
+   margin-bottom: 1.4em;
+}
+/* parrafios de bio-info se definio un tamaño,alineado y un espacido a la fuente
+se definio un espacio entre lineas y se alineo el texto a la izquierda,
+se agrego un margin inferior*/
+.bio-info p{
+    font-size: 16px;
+    padding: 2em;
+    text-align: left;
+    line-height: 25px;
+    letter-spacing: 2px;
+    margin-bottom: 0.7em;
+}
+/*para contacto se deifinio el display como flex, la direccion del flex
+se laineo el texto a la izquiera y se agrego un padding*/
+.contact {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0px 1em;
+}
+/* para los labels del form se define un tamaño de fuente y un grosor*/
+form label{
+    font-size: 1.7em;
+    font-weight: 700;
+}
+/* se define un margen superior */
+.contact * + * {
+    margin-top: 0.8em;
+}
+/* formulario de contacto se define el display y la direccion*/
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+/* Margen inferior para el input de contct */
+.contact input{
+    margin-bottom: 0.5em;
+}
+/* para los input y text area de contacto se define un paading
+,borde,radio del borde,tamaño de la fuente y un ancho*/
+.contact-form input, .contact-form textarea{
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0px 2em;
+    font-size: 1em;
+    width: 100%;
+}
+
+/* Decorando placeholder */
+
+::-webkit-input-placeholder { 
+    color: #D7DEE6; 
+} 
+ 
+:-moz-placeholder { /* Firefox 18- */ color: #D7DEE6; } 
+ 
+::-moz-placeholder { /* Firefox 19+ */ color: #D7DEE6; } 
+ 
+:-ms-input-placeholder { color: #D7DEE6; }
+/* para los inputs de tipo submit de contacts se cambio el color del fondo
+el grosor de la fuente y el color, se agrego un margen superior e inferior y un espaciado de texto */
+.contact-form input[type=submit] {
+    background-color: #F74442;
+    font-weight: 180;
+    color: white;
+    font-size: 1.40rem;
+    margin-top: 1.75em;
+    margin-bottom: 3em;
+    letter-spacing: 0.05em;
+}
+
+.black-decoration{
+    background-image: url("../images/decoracion_oscura_small.svg");
+}
+/* para el footer se definio un color de fondo y un color de fuente*/
+footer{
+    background-color: #0D5061;
+    color:#D7DEE6;
+}
+/* para los social links del footer se asigno un margen*/
+footer .social-links li{
+    margin-top: -9em;
+}
+
+/* para los social links del footer se asigno un margen*/
+footer .social-links li:first-child a{
+    margin-right: 0.18em;
+}
+/* se desactivo el resize de las text area*/
+textarea{
+    resize: none;
+}
+/* para los parrados del footer se asigno un tamaño de fuente un margen superior
+y un padding inferior */
+footer p{
+    font-size: 0.9em;
+    margin-top: -4em;
+    padding-bottom: 2.5em;
+
+}
+/* para el menu se define un color de fondo,la posicion,index,anchura,altura
+,se quita el estilo a la lista y se alinea el texto a la izquierda*/
+.menu {
+    background-color: #112935;
+    position: absolute;
+    z-index: 20;
+    top: 60px;
+    right: 0;
+    width: 100vw;
+    height: calc(100vh - 60px);
+    list-style: none;
+    text-align: left;
+    padding: 1em;
+}
+/* para las listas del menu se define el display, un padding y un margen superior*/
+.menu li {
+    display: block;
+    padding: 0.5em;
+    margin-top: 5px;
+}
+/* para los hipervinculos de las listas del menu se define un color de fuente
+y se quita la decoracion del texto*/
+.menu li a {
+    color: white;
+    text-decoration: none;   
+}
+/* para las imagenes del container de big hero se define una altura y un anchura
+y un margen inferior */
+.big-hero .container img{
+    height: 175px;
+    width: auto;
+    margin-bottom: 6%;
+}
+/* Pesonalizando estilo para tablets*/
+@media only screen and (min-width: 768px) {
+/* Se ajustaron los valores de las clases para tablets*/ 
+    .header a{
+        font-size: 1.2em;
+        
+    }
+    .container
+    {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .header
+    {
+        margin: 0% 2%;
+    }
+    .about
+    {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3%;
+    }
+    .bio-info
+    {
+        margin-top: 2%;
+        float: left;
+        width: 50%;
+    }
+    .contact
+    {
+        margin-top: 2%;
+        float: right;
+        width:50%;
+    }
+    .contact-form input[type=submit]
+    {
+        width: 50%;
+    }
+    .social-links li a
+    {
+        font-size: 5em;
+    }
+    .post ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .post ul li {
+        min-height: 350px;
+        max-height: 3500px;
+        margin: 1rem 2rem;
+        flex: 1 0 300px;
+    }
+
+
+    .logo {
+        width: 150px;
+        margin: 1.5em;
+    }
+
+    .show-desktop {
+        display: block;
+    }
+
+    .hide-desktop {
+        display: none;
+    }
+
+    .menu {
+        background-color: #112935;
+        position: static;
+        z-index: 20;
+        width: auto;
+        height:auto;
+        display: flex;
+        margin-top: 1em;
+    }
+
+
+
+    /*TODO: FALTA CSS */
+} 
+
+@media only screen and (min-width: 1024px) {
+    .menu li a:hover{
+        color: #F74442;
+        
+    }
+    .container
+    {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .header
+    {
+        margin: 0% 2%;
+    }
+    .about
+    {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3%;
+    }
+    .bio-info
+    {
+        margin-top: 2%;
+        float: left;
+        width: 50%;
+    }
+    .contact
+    {
+        margin-top: 2%;
+        float: right;
+        width:50%;
+    }
+    .contact-form input[type=submit]
+    {
+        width: 50%;
+    }
+
+}
+
+@media only screen and (min-width: 1440px) {
+
+    /*TODO: FALTA CSS */
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+}
